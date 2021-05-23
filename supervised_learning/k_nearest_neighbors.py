@@ -1,4 +1,6 @@
 import numpy as np
+from utils.data_operation import eucliden_distance
+from utils.data_man import train_test_split
 
 class KNN():
     def __init__(self,k = 5):
@@ -19,13 +21,14 @@ class KNN():
 """Test OF Algo"""
 
 import pandas as pd
+
 dataset = pd.read_csv('data/TempLinkoping2016.txt',delimiter = "\t")
 
 X = dataset.iloc[:,:1].values
 y = dataset.iloc[:,1:2].values
 
 
-from sklearn.model_selection import train_test_split
+
 
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size = 0.3)
 
