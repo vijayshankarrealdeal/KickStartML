@@ -1,5 +1,4 @@
 import numpy as np
-from kickstartml.utils import eucliden_distance
 
 class KNN():
     def __init__(self,k = 5):
